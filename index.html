@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncrash Davionn - Official Page</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .game-logo {
+            width: 200px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        h1 { margin-bottom: 10px; }
+        p { line-height: 1.6; color: #ccc; }
+        
+        .button-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            transition: transform 0.2s, background 0.2s;
+            display: block;
+        }
+        .btn:hover { transform: scale(1.05); }
+        
+        /* Farben für die Buttons */
+        .btn-playstore { background-color: #34a853; }
+        .btn-tablet { background-color: #f4b400; }
+        .btn-mobile { background-color: #4285f4; }
+        
+        .section-title {
+            margin-top: 40px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="logo.png" alt="Game Logo" class="game-logo">
+    
+    <h1>Uncrash Davionn</h1>
+    <p>Willkommen zum offiziellen Portal von Uncrash Davionn. Erlebe das Abenteuer auf deiner bevorzugten Plattform!</p>
+
+    <div class="section-title">Download</div>
+    <div class="button-grid">
+        <a href="DEIN_PLAYSTORE_LINK" class="btn btn-playstore">Google Play Store</a>
+    </div>
+
+    <div class="section-title">Web Versionen</div>
+    <div class="button-grid">
+        <a href="/tablet/index.html" class="btn btn-tablet">Mobile Version (Tablet)</a>
+        <a href="/smartphone/index.html" class="btn btn-mobile">Mobile Version (Smartphone)</a>
+    </div>
+</div>
+
+</body>
+</html>
