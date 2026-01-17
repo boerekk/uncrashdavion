@@ -3,83 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uncrash Davionn - Official Page</title>
+    <title>Uncrash Davionn | Official Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #007bff;
-            --bg-color: #121212;
-            --text-color: #ffffff;
+            --primary-color: #2563eb;
+            --bg-color: #ffffff;
+            --secondary-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
         }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
-            text-align: center;
+            color: var(--text-main);
             margin: 0;
-            padding: 20px;
+            line-height: 1.6;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 50px;
+            flex-wrap: wrap;
         }
-        .game-logo {
-            width: 200px;
-            border-radius: 20px;
-            margin-bottom: 20px;
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
         }
-        h1 { margin-bottom: 10px; }
-        p { line-height: 1.6; color: #ccc; }
-        
-        .button-grid {
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .button-group {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-top: 30px;
         }
+
         .btn {
-            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
             font-size: 18px;
+            font-weight: 600;
             text-decoration: none;
             color: white;
-            border-radius: 8px;
-            transition: transform 0.2s, background 0.2s;
-            display: block;
+            border-radius: 50px; /* Vollständig rund */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .btn:hover { transform: scale(1.05); }
-        
-        /* Farben für die Buttons */
-        .btn-playstore { background-color: #34a853; }
-        .btn-tablet { background-color: #f4b400; }
-        .btn-mobile { background-color: #4285f4; }
-        
-        .section-title {
-            margin-top: 40px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #888;
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-playstore { background-color: #000000; }
+        .btn-tablet { background-color: #4b5563; }
+        .btn-mobile { background-color: var(--primary-color); }
+
+        /* Info Section */
+        .info-section {
+            background-color: var(--secondary-bg);
+            padding: 100px 40px;
+            text-align: center;
+        }
+
+        .info-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .info-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .info-text {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        /* Mobile Anpassung */
+        @media (max-width: 768px) {
+            .hero { text-align: center; padding: 20px; }
+            .hero-content { text-align: center; }
+            h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <img src="logo.png" alt="Game Logo" class="game-logo">
-    
-    <h1>Uncrash Davionn</h1>
-    <p>Willkommen zum offiziellen Portal von Uncrash Davionn. Erlebe das Abenteuer auf deiner bevorzugten Plattform!</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Uncrash Davionn</h1>
+            <p class="subtitle">Meistere die Herausforderung und crashe nicht! Wähle deine Version:</p>
+            
+            <div class="button-group">
+                <a href="DEIN_LINK" class="btn btn-playstore">
+                    <i class="fab fa-google-play"></i> Google Play
+                </a>
+                
+                <a href="/tablet/" class="btn btn-tablet">
+                    <i class="fas fa-tablet-alt"></i> Tablet Version
+                </a>
+                
+                <a href="/smartphone/" class="btn btn-mobile">
+                    <i class="fas fa-mobile-alt"></i> Smartphone Version
+                </a>
+            </div>
+        </div>
 
-    <div class="section-title">Download</div>
-    <div class="button-grid">
-        <a href="DEIN_PLAYSTORE_LINK" class="btn btn-playstore">Google Play Store</a>
-    </div>
+        <div class="hero-image">
+            <img src="Game1.png" alt="Uncrash Davionn Gameplay">
+        </div>
+    </section>
 
-    <div class="section-title">Web Versionen</div>
-    <div class="button-grid">
-        <a href="/tablet/index.html" class="btn btn-tablet">Mobile Version (Tablet)</a>
-        <a href="/smartphone/index.html" class="btn btn-mobile">Mobile Version (Smartphone)</a>
-    </div>
-</div>
+    <section class="info-section">
+        <div class="info-container">
+            <h2>Über das Spiel</h2>
+            <div class="info-text">
+                <p>
+                    Uncrash Davionn ist ein rasantes Arcade-Erlebnis, das deine Reflexe auf die Probe stellt. 
+                    In einer Welt voller Hindernisse ist dein einziges Ziel: Überleben. Die Web-Versionen sind speziell 
+                    für die Steuerung auf Touch-Geräten optimiert, um dir auch im Browser das beste Gefühl zu geben.
+                </p>
+                <p>
+                    Egal ob auf dem großen Tablet-Bildschirm oder unterwegs auf dem Smartphone – durch unsere 
+                    angepassten Skalierungen genießt du immer die volle Übersicht über das Spielgeschehen.
+                </p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
