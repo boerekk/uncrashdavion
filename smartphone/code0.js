@@ -96,14 +96,14 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.Game_32MenuCode.asyncCallback12537004 = function (runtimeScene, asyncObjectsList) {
+};gdjs.Game_32MenuCode.asyncCallback14367420 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.Game_32MenuCode.localVariables);
 
 { //Subevents
 gdjs.Game_32MenuCode.eventsList1(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs.Game_32MenuCode.localVariables.length = 0;
 }
-gdjs.Game_32MenuCode.idToCallbackMap.set(12537004, gdjs.Game_32MenuCode.asyncCallback12537004);
+gdjs.Game_32MenuCode.idToCallbackMap.set(14367420, gdjs.Game_32MenuCode.asyncCallback14367420);
 gdjs.Game_32MenuCode.eventsList2 = function(runtimeScene) {
 
 {
@@ -114,7 +114,7 @@ gdjs.Game_32MenuCode.eventsList2 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.Game_32MenuCode.localVariables);
 for (const obj of gdjs.Game_32MenuCode.GDPlayButtonObjects1) asyncObjectsList.addObject("PlayButton", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs.Game_32MenuCode.asyncCallback12537004(runtimeScene, asyncObjectsList)), 12537004, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1), (runtimeScene) => (gdjs.Game_32MenuCode.asyncCallback14367420(runtimeScene, asyncObjectsList)), 14367420, asyncObjectsList);
 }
 }
 

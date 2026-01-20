@@ -135,7 +135,7 @@ gdjs.GameCode.GDPlaneObjects5= [];
 gdjs.GameCode.GDPlaneObjects6= [];
 
 
-gdjs.GameCode.asyncCallback12569716 = function (runtimeScene, asyncObjectsList) {
+gdjs.GameCode.asyncCallback14403076 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Coin"), gdjs.GameCode.GDCoinObjects5);
 
@@ -207,7 +207,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("Plane"), gdjs.GameCode.GDPlaneObject
 }
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12569716, gdjs.GameCode.asyncCallback12569716);
+gdjs.GameCode.idToCallbackMap.set(14403076, gdjs.GameCode.asyncCallback14403076);
 gdjs.GameCode.eventsList0 = function(runtimeScene, asyncObjectsList) {
 
 {
@@ -224,14 +224,14 @@ for (const obj of gdjs.GameCode.GDCountdownObjects4) asyncObjectsList.addObject(
 /* Don't save Pause_Background as it will be provided by the parent asyncObjectsList. */
 /* Don't save Pause_button as it will be provided by the parent asyncObjectsList. */
 /* Don't save Plane as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.GameCode.asyncCallback12569716(runtimeScene, asyncObjectsList)), 12569716, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.2), (runtimeScene) => (gdjs.GameCode.asyncCallback14403076(runtimeScene, asyncObjectsList)), 14403076, asyncObjectsList);
 }
 }
 
 }
 
 
-};gdjs.GameCode.asyncCallback12569412 = function (runtimeScene, asyncObjectsList) {
+};gdjs.GameCode.asyncCallback14402772 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Countdown"), gdjs.GameCode.GDCountdownObjects4);
 
@@ -244,7 +244,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("Countdown"), gdjs.GameCode.GDCountdo
 gdjs.GameCode.eventsList0(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12569412, gdjs.GameCode.asyncCallback12569412);
+gdjs.GameCode.idToCallbackMap.set(14402772, gdjs.GameCode.asyncCallback14402772);
 gdjs.GameCode.eventsList1 = function(runtimeScene, asyncObjectsList) {
 
 {
@@ -261,14 +261,14 @@ for (const obj of gdjs.GameCode.GDCountdownObjects3) asyncObjectsList.addObject(
 /* Don't save Pause_Background as it will be provided by the parent asyncObjectsList. */
 /* Don't save Pause_button as it will be provided by the parent asyncObjectsList. */
 /* Don't save Plane as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback12569412(runtimeScene, asyncObjectsList)), 12569412, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback14402772(runtimeScene, asyncObjectsList)), 14402772, asyncObjectsList);
 }
 }
 
 }
 
 
-};gdjs.GameCode.asyncCallback12565340 = function (runtimeScene, asyncObjectsList) {
+};gdjs.GameCode.asyncCallback14398700 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Countdown"), gdjs.GameCode.GDCountdownObjects3);
 
@@ -281,7 +281,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("Countdown"), gdjs.GameCode.GDCountdo
 gdjs.GameCode.eventsList1(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12565340, gdjs.GameCode.asyncCallback12565340);
+gdjs.GameCode.idToCallbackMap.set(14398700, gdjs.GameCode.asyncCallback14398700);
 gdjs.GameCode.eventsList2 = function(runtimeScene, asyncObjectsList) {
 
 {
@@ -298,14 +298,14 @@ for (const obj of gdjs.GameCode.GDCountdownObjects2) asyncObjectsList.addObject(
 /* Don't save Pause_Background as it will be provided by the parent asyncObjectsList. */
 /* Don't save Pause_button as it will be provided by the parent asyncObjectsList. */
 /* Don't save Plane as it will be provided by the parent asyncObjectsList. */
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback12565340(runtimeScene, asyncObjectsList)), 12565340, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback14398700(runtimeScene, asyncObjectsList)), 14398700, asyncObjectsList);
 }
 }
 
 }
 
 
-};gdjs.GameCode.asyncCallback12568420 = function (runtimeScene, asyncObjectsList) {
+};gdjs.GameCode.asyncCallback14401780 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Countdown"), gdjs.GameCode.GDCountdownObjects2);
 
@@ -318,7 +318,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("Countdown"), gdjs.GameCode.GDCountdo
 gdjs.GameCode.eventsList2(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12568420, gdjs.GameCode.asyncCallback12568420);
+gdjs.GameCode.idToCallbackMap.set(14401780, gdjs.GameCode.asyncCallback14401780);
 gdjs.GameCode.eventsList3 = function(runtimeScene) {
 
 {
@@ -334,7 +334,7 @@ for (const obj of gdjs.GameCode.GDCountdownObjects1) asyncObjectsList.addObject(
 for (const obj of gdjs.GameCode.GDPause_9595BackgroundObjects1) asyncObjectsList.addObject("Pause_Background", obj);
 for (const obj of gdjs.GameCode.GDPause_9595buttonObjects1) asyncObjectsList.addObject("Pause_button", obj);
 for (const obj of gdjs.GameCode.GDPlaneObjects1) asyncObjectsList.addObject("Plane", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback12568420(runtimeScene, asyncObjectsList)), 12568420, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback14401780(runtimeScene, asyncObjectsList)), 14401780, asyncObjectsList);
 }
 }
 
@@ -1212,7 +1212,7 @@ gdjs.copyArray(runtimeScene.getObjects("Restart_button"), gdjs.GameCode.GDRestar
 }
 
 
-};gdjs.GameCode.asyncCallback12602612 = function (runtimeScene, asyncObjectsList) {
+};gdjs.GameCode.asyncCallback14435972 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Menu_button"), gdjs.GameCode.GDMenu_9595buttonObjects3);
 
@@ -1222,7 +1222,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("Menu_button"), gdjs.GameCode.GDMenu_
 }
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12602612, gdjs.GameCode.asyncCallback12602612);
+gdjs.GameCode.idToCallbackMap.set(14435972, gdjs.GameCode.asyncCallback14435972);
 gdjs.GameCode.eventsList10 = function(runtimeScene) {
 
 {
@@ -1233,14 +1233,14 @@ gdjs.GameCode.eventsList10 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.GameCode.localVariables);
 for (const obj of gdjs.GameCode.GDMenu_9595buttonObjects2) asyncObjectsList.addObject("Menu_button", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback12602612(runtimeScene, asyncObjectsList)), 12602612, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback14435972(runtimeScene, asyncObjectsList)), 14435972, asyncObjectsList);
 }
 }
 
 }
 
 
-};gdjs.GameCode.asyncCallback12604260 = function (runtimeScene, asyncObjectsList) {
+};gdjs.GameCode.asyncCallback14437620 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Restart_button"), gdjs.GameCode.GDRestart_9595buttonObjects2);
 
@@ -1250,7 +1250,7 @@ gdjs.copyArray(asyncObjectsList.getObjects("Restart_button"), gdjs.GameCode.GDRe
 }
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12604260, gdjs.GameCode.asyncCallback12604260);
+gdjs.GameCode.idToCallbackMap.set(14437620, gdjs.GameCode.asyncCallback14437620);
 gdjs.GameCode.eventsList11 = function(runtimeScene) {
 
 {
@@ -1261,7 +1261,7 @@ gdjs.GameCode.eventsList11 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.GameCode.localVariables);
 for (const obj of gdjs.GameCode.GDRestart_9595buttonObjects1) asyncObjectsList.addObject("Restart_button", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback12604260(runtimeScene, asyncObjectsList)), 12604260, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(1), (runtimeScene) => (gdjs.GameCode.asyncCallback14437620(runtimeScene, asyncObjectsList)), 14437620, asyncObjectsList);
 }
 }
 
@@ -1393,13 +1393,13 @@ gdjs.GameCode.eventsList11(runtimeScene);} //End of subevents
 
 
 };gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDFloorObjects2Objects = Hashtable.newFrom({"Floor": gdjs.GameCode.GDFloorObjects2});
-gdjs.GameCode.asyncCallback12611932 = function (runtimeScene, asyncObjectsList) {
+gdjs.GameCode.asyncCallback14445292 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 {runtimeScene.getScene().getVariables().getFromIndex(13).setBoolean(true);
 }
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12611932, gdjs.GameCode.asyncCallback12611932);
+gdjs.GameCode.idToCallbackMap.set(14445292, gdjs.GameCode.asyncCallback14445292);
 gdjs.GameCode.eventsList14 = function(runtimeScene) {
 
 {
@@ -1409,7 +1409,7 @@ gdjs.GameCode.eventsList14 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.GameCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.GameCode.asyncCallback12611932(runtimeScene, asyncObjectsList)), 12611932, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.GameCode.asyncCallback14445292(runtimeScene, asyncObjectsList)), 14445292, asyncObjectsList);
 }
 }
 
@@ -1417,13 +1417,13 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), 
 
 
 };gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDairport_95959595towerObjects2Objects = Hashtable.newFrom({"airport_tower": gdjs.GameCode.GDairport_9595towerObjects2});
-gdjs.GameCode.asyncCallback12614540 = function (runtimeScene, asyncObjectsList) {
+gdjs.GameCode.asyncCallback14447900 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
 {runtimeScene.getScene().getVariables().getFromIndex(14).setBoolean(true);
 }
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.idToCallbackMap.set(12614540, gdjs.GameCode.asyncCallback12614540);
+gdjs.GameCode.idToCallbackMap.set(14447900, gdjs.GameCode.asyncCallback14447900);
 gdjs.GameCode.eventsList15 = function(runtimeScene) {
 
 {
@@ -1433,7 +1433,7 @@ gdjs.GameCode.eventsList15 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.GameCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(gdjs.randomInRange(5, 12)), (runtimeScene) => (gdjs.GameCode.asyncCallback12614540(runtimeScene, asyncObjectsList)), 12614540, asyncObjectsList);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(gdjs.randomInRange(5, 12)), (runtimeScene) => (gdjs.GameCode.asyncCallback14447900(runtimeScene, asyncObjectsList)), 14447900, asyncObjectsList);
 }
 }
 

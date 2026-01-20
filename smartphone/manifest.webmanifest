@@ -3,7 +3,7 @@
   "short_name": "un crash d'avion",
   "id": "com.minecrasher.planecrash",
   "description": "",
-  "orientation": "landscape",
+  "orientation": "portrait",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "black",
