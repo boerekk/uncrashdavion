@@ -8,8 +8,6 @@
     <style>
         :root {
             --primary-color: #2563eb;
-            --bg-color: #ffffff;
-            --secondary-bg: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #64748b;
         }
@@ -18,10 +16,23 @@
 
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
             line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animierter Himmel Hintergrund */
+        .sky-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: background 0.5s ease;
         }
 
         /* Hero Section */
@@ -54,7 +65,7 @@
             max-width: 100%;
             height: auto;
             border-radius: 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
         }
 
         h1 {
@@ -62,12 +73,14 @@
             margin-bottom: 10px;
             font-weight: 800;
             color: #0f172a;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: var(--text-main);
             margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
         }
 
         /* Buttons */
@@ -87,14 +100,14 @@
             font-weight: 600;
             text-decoration: none;
             color: white;
-            border-radius: 50px; /* Vollständig rund */
+            border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
         }
 
         .btn-playstore { background-color: #000000; }
@@ -103,9 +116,9 @@
 
         /* Info Section */
         .info-section {
-            background-color: var(--secondary-bg);
             padding: 100px 40px;
             text-align: center;
+            position: relative;
         }
 
         .info-container {
@@ -116,11 +129,12 @@
         .info-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #0f172a;
         }
 
         .info-text {
             font-size: 1.2rem;
-            color: var(--text-muted);
+            color: var(--text-main);
             text-align: justify;
         }
 
@@ -133,6 +147,8 @@
     </style>
 </head>
 <body>
+
+    <div class="sky-background" id="skyBg"></div>
 
     <section class="hero">
         <div class="hero-content">
@@ -165,17 +181,72 @@
             <div class="info-text">
                 <p>
                     Wir sind ein kleines Team mit einer großen Idee: Lernen soll Spaß machen.
-                    Mit Un Crash d’Avion entwickeln wir einen Vokabeltrainer, der klassisches Lernen mit spielerischen Elementen
+                    Mit Un Crash d'Avion entwickeln wir einen Vokabeltrainer, der klassisches Lernen mit spielerischen Elementen
                     verbindet. Statt trockener Abfragen setzen wir auf Motivation, Interaktion und echtes Gameplay.
                 </p>
                 <p>
                     Unsere Vision ist es, dass Vokabeln nicht auswendig gelernt werden müssen, sondern sich ganz natürlich
                     durch das Spielen festigen. Jeder Fortschritt im Spiel basiert auf deinem Wissen – je besser du lernst, desto
-		    weiter kommst du. Fehler gehören dabei genauso zum Prozess wie Erfolge.
+                    weiter kommst du. Fehler gehören dabei genauso zum Prozess wie Erfolge.
                 </p>
             </div>
         </div>
     </section>
+
+    <script>
+        // Himmel-zu-Sonnenuntergang Animation beim Scrollen
+        const skyBg = document.getElementById('skyBg');
+        
+        function updateSkyColor() {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrollPercentage = Math.min(scrollPosition / documentHeight, 1);
+            
+            // Farben für den Übergang
+            const skyBlue = { r: 135, g: 206, b: 235 }; // Himmelsblau
+            const sunsetOrange1 = { r: 255, g: 94, b: 77 }; // Orange-Rot
+            const sunsetOrange2 = { r: 255, g: 165, b: 0 }; // Orange
+            const sunsetPurple = { r: 186, g: 85, b: 211 }; // Lila
+            
+            let gradient;
+            
+            if (scrollPercentage < 0.3) {
+                // Heller Himmel
+                gradient = `linear-gradient(to bottom, 
+                    rgb(135, 206, 235) 0%, 
+                    rgb(176, 224, 230) 100%)`;
+            } else if (scrollPercentage < 0.7) {
+                // Übergang zum Sonnenuntergang
+                const localProgress = (scrollPercentage - 0.3) / 0.4;
+                gradient = `linear-gradient(to bottom, 
+                    rgb(${Math.round(135 + (255 - 135) * localProgress)}, 
+                        ${Math.round(206 - (206 - 165) * localProgress)}, 
+                        ${Math.round(235 - (235 - 0) * localProgress)}) 0%,
+                    rgb(${Math.round(176 + (255 - 176) * localProgress)}, 
+                        ${Math.round(224 - (224 - 94) * localProgress)}, 
+                        ${Math.round(230 - (230 - 77) * localProgress)}) 50%,
+                    rgb(${Math.round(135 + (186 - 135) * localProgress)}, 
+                        ${Math.round(206 - (206 - 85) * localProgress)}, 
+                        ${Math.round(235 - (235 - 211) * localProgress)}) 100%)`;
+            } else {
+                // Voller Sonnenuntergang
+                gradient = `linear-gradient(to bottom, 
+                    rgb(255, 165, 0) 0%, 
+                    rgb(255, 94, 77) 40%, 
+                    rgb(186, 85, 211) 70%,
+                    rgb(75, 0, 130) 100%)`;
+            }
+            
+            skyBg.style.background = gradient;
+        }
+        
+        // Event Listener für Scroll
+        window.addEventListener('scroll', updateSkyColor);
+        
+        // Initiale Farbe setzen
+        updateSkyColor();
+    </script>
 
 </body>
 </html>
